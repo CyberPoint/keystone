@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20230626144435",
+  "entityTableName": "agent",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "classification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "installedOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "uninstallDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "deactivate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "autoRegistered",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "approved",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Agent",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "platform",
+      "relationshipName": "platform",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

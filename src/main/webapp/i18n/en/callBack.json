@@ -1,0 +1,30 @@
+{
+  "keyStoneApp": {
+    "callBack": {
+      "home": {
+        "title": "Call Backs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Call Back",
+        "createOrEditLabel": "Create or edit a Call Back",
+        "notFound": "No Call Backs found"
+      },
+      "created": "A new Call Back is created with identifier {{ param }}",
+      "updated": "A Call Back is updated with identifier {{ param }}",
+      "deleted": "A Call Back is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Call Back {{ id }}?"
+      },
+      "detail": {
+        "title": "Call Back"
+      },
+      "id": "ID",
+      "ipAddress": "Ip Address",
+      "url": "Url",
+      "remotePort": "Remote Port",
+      "timestamp": "Timestamp",
+      "buffer": "Buffer",
+      "rawcontents": "Rawcontents",
+      "agent": "Agent"
+    }
+  }
+}

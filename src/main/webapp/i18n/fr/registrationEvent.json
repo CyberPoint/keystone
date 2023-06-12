@@ -1,0 +1,31 @@
+{
+  "keyStoneApp": {
+    "registrationEvent": {
+      "home": {
+        "title": "RegistrationEvents",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Registration Event",
+        "createOrEditLabel": "Créer ou éditer un Registration Event",
+        "notFound": "Aucun Registration Event trouvé"
+      },
+      "created": "Un nouveau Registration Event a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Registration Event avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Registration Event avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Registration Event {{ id }} ?"
+      },
+      "detail": {
+        "title": "Registration Event"
+      },
+      "id": "ID",
+      "ipAddress": "Ip Address",
+      "rawContents": "Raw Contents",
+      "remotePort": "Remote Port",
+      "name": "Name",
+      "approved": "Approved",
+      "registrationDate": "Registration Date",
+      "agent": "Agent",
+      "secret": "Secret"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "keyStoneApp": {
+    "taskResult": {
+      "home": {
+        "title": "TaskResults",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Task Result",
+        "createOrEditLabel": "Créer ou éditer un Task Result",
+        "notFound": "Aucun Task Result trouvé"
+      },
+      "created": "Un nouveau Task Result a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Task Result avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Task Result avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Task Result {{ id }} ?"
+      },
+      "detail": {
+        "title": "Task Result"
+      },
+      "id": "ID",
+      "embeddeddata": "Embeddeddata",
+      "added": "Added",
+      "reviewed": "Reviewed",
+      "ipAddress": "Ip Address",
+      "headers": "Headers",
+      "url": "Url",
+      "task": "Task",
+      "help": {
+        "embeddeddata": "The firstname attribute."
+      }
+    }
+  }
+}
