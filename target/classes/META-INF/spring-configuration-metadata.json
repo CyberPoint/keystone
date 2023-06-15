@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "net.adoptium.config.ApplicationProperties",
+      "sourceType": "net.adoptium.config.ApplicationProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
