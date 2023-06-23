@@ -2,6 +2,7 @@ package com.cyberpoint.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.cyberpoint.domain.Agent;
 import com.cyberpoint.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 

@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.cyberpoint.IntegrationTest;
 import com.cyberpoint.domain.Agent;
 import com.cyberpoint.repository.AgentRepository;
+import com.cyberpoint.web.rest.AgentResource;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

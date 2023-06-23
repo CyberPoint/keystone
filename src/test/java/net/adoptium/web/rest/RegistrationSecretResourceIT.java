@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.cyberpoint.IntegrationTest;
 import com.cyberpoint.domain.RegistrationSecret;
 import com.cyberpoint.repository.RegistrationSecretRepository;
+import com.cyberpoint.web.rest.RegistrationSecretResource;
 import jakarta.persistence.EntityManager;
 import java.util.List;
 import java.util.Random;
