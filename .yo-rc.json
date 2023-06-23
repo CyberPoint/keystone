@@ -28,7 +28,7 @@
     "microfrontend": false,
     "microfrontends": [],
     "nativeLanguage": "en",
-    "packageFolder": "net/adoptium",
+    "packageFolder": "com/cyberpoint",
     "packageName": "com.cyberpoint",
     "pages": [],
     "prodDatabaseType": "postgresql",
