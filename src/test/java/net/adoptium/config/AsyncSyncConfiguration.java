@@ -1,4 +1,4 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
 import java.util.concurrent.Executor;
 import org.springframework.context.annotation.Bean;

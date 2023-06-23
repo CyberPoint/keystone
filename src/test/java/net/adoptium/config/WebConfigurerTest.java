@@ -1,4 +1,4 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;

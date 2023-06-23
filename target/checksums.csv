@@ -1,6 +1,6 @@
 #File,SHA-1
 package-lock.json,e9bb3eac1424f78ba007ceca406d60f64e9546b0
-package.json,8886bb5cfea87c09d980792832d2fc0d6f4ed4ee
+package.json,7e9c2bd1d7d86ff35ec81b3230a6037d9fef155d
 src/main/webapp/404.html,6f1f8f2578202ca1b6bef5384ba474825d2722e9
 src/main/webapp/WEB-INF/web.xml,f3577fd846ec450b1c1687c78d076c2b99e075c2
 src/main/webapp/app/_bootstrap-variables.scss,6446e6ea2fab1addd8ba95275556139904fda000

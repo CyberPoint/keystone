@@ -1,4 +1,4 @@
-package net.adoptium;
+package com.cyberpoint;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(KeyStoneApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            net.adoptium.config.Constants.class,
-            net.adoptium.config.ApplicationProperties.class
+            com.cyberpoint.config.Constants.class,
+            com.cyberpoint.config.ApplicationProperties.class
         ));
 }

@@ -1,12 +1,12 @@
-package net.adoptium;
+package com.cyberpoint;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import net.adoptium.KeyStoneApp;
-import net.adoptium.config.AsyncSyncConfiguration;
-import net.adoptium.config.EmbeddedSQL;
+import com.cyberpoint.KeyStoneApp;
+import com.cyberpoint.config.AsyncSyncConfiguration;
+import com.cyberpoint.config.EmbeddedSQL;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 

@@ -1,7 +1,7 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
 import java.util.Comparator;
-import net.adoptium.IntegrationTest;
+import com.cyberpoint.IntegrationTest;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;
 import org.junit.jupiter.api.ClassOrdererContext;

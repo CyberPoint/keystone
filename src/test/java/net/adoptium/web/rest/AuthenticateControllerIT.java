@@ -1,4 +1,4 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
 import static org.hamcrest.Matchers.emptyString;
 import static org.hamcrest.Matchers.is;
@@ -9,10 +9,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import net.adoptium.IntegrationTest;
-import net.adoptium.domain.User;
-import net.adoptium.repository.UserRepository;
-import net.adoptium.web.rest.vm.LoginVM;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.UserRepository;
+import com.cyberpoint.web.rest.vm.LoginVM;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

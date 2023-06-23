@@ -1,4 +1,4 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

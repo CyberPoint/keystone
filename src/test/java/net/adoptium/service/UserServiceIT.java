@@ -1,4 +1,4 @@
-package net.adoptium.service;
+package com.cyberpoint.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
-import net.adoptium.IntegrationTest;
-import net.adoptium.config.Constants;
-import net.adoptium.domain.User;
-import net.adoptium.repository.UserRepository;
-import net.adoptium.service.dto.AdminUserDTO;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.config.Constants;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.UserRepository;
+import com.cyberpoint.service.dto.AdminUserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,13 +1,13 @@
-package net.adoptium.config.timezone;
+package com.cyberpoint.config.timezone;
 
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import net.adoptium.IntegrationTest;
-import net.adoptium.repository.timezone.DateTimeWrapper;
-import net.adoptium.repository.timezone.DateTimeWrapperRepository;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.repository.timezone.DateTimeWrapper;
+import com.cyberpoint.repository.timezone.DateTimeWrapperRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

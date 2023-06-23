@@ -1,4 +1,4 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -9,13 +9,13 @@ import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.util.*;
 import java.util.function.Consumer;
-import net.adoptium.IntegrationTest;
-import net.adoptium.domain.Authority;
-import net.adoptium.domain.User;
-import net.adoptium.repository.UserRepository;
-import net.adoptium.security.AuthoritiesConstants;
-import net.adoptium.service.dto.AdminUserDTO;
-import net.adoptium.service.mapper.UserMapper;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.domain.Authority;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.UserRepository;
+import com.cyberpoint.security.AuthoritiesConstants;
+import com.cyberpoint.service.dto.AdminUserDTO;
+import com.cyberpoint.service.mapper.UserMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

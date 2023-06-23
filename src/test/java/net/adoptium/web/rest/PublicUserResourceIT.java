@@ -1,4 +1,4 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasItems;
@@ -6,10 +6,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import jakarta.persistence.EntityManager;
-import net.adoptium.IntegrationTest;
-import net.adoptium.domain.User;
-import net.adoptium.repository.UserRepository;
-import net.adoptium.security.AuthoritiesConstants;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.UserRepository;
+import com.cyberpoint.security.AuthoritiesConstants;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package net.adoptium.repository.timezone;
+package com.cyberpoint.repository.timezone;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

@@ -1,7 +1,7 @@
-package net.adoptium.security.jwt;
+package com.cyberpoint.security.jwt;
 
-import static net.adoptium.security.SecurityUtils.AUTHORITIES_KEY;
-import static net.adoptium.security.SecurityUtils.JWT_ALGORITHM;
+import static com.cyberpoint.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.cyberpoint.security.SecurityUtils.JWT_ALGORITHM;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;

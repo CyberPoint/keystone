@@ -1,6 +1,6 @@
-package net.adoptium.security.jwt;
+package com.cyberpoint.security.jwt;
 
-import static net.adoptium.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.cyberpoint.security.jwt.JwtAuthenticationTestUtils.*;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 

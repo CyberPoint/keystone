@@ -1,4 +1,4 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
 import java.util.Arrays;
 import java.util.List;

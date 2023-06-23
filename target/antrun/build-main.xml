@@ -3,9 +3,9 @@
   <target name="main">
     <condition else="false" property="skip.npm" value="true">
       <and>
-        <available file="checksums.csv" filepath="/home/vboxuser/CyberPoint-KeyStone/keystone/target" />
-        <available file="checksums.csv.old" filepath="/home/vboxuser/CyberPoint-KeyStone/keystone/target" />
-        <filesmatch file2="/home/vboxuser/CyberPoint-KeyStone/keystone/target/checksums.csv.old" file1="/home/vboxuser/CyberPoint-KeyStone/keystone/target/checksums.csv" />
+        <available file="checksums.csv" filepath="/Users/mschreiber/Work/CPI/keystone/target" />
+        <available file="checksums.csv.old" filepath="/Users/mschreiber/Work/CPI/keystone/target" />
+        <filesmatch file2="/Users/mschreiber/Work/CPI/keystone/target/checksums.csv.old" file1="/Users/mschreiber/Work/CPI/keystone/target/checksums.csv" />
       </and>
     </condition>
   </target>

@@ -1,24 +1,24 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
-import static net.adoptium.web.rest.AccountResourceIT.TEST_USER_LOGIN;
+import static com.cyberpoint.web.rest.AccountResourceIT.TEST_USER_LOGIN;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.time.Instant;
 import java.util.*;
-import net.adoptium.IntegrationTest;
-import net.adoptium.config.Constants;
-import net.adoptium.domain.User;
-import net.adoptium.repository.AuthorityRepository;
-import net.adoptium.repository.UserRepository;
-import net.adoptium.security.AuthoritiesConstants;
-import net.adoptium.service.UserService;
-import net.adoptium.service.dto.AdminUserDTO;
-import net.adoptium.service.dto.PasswordChangeDTO;
-import net.adoptium.service.dto.UserDTO;
-import net.adoptium.web.rest.vm.KeyAndPasswordVM;
-import net.adoptium.web.rest.vm.ManagedUserVM;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.config.Constants;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.AuthorityRepository;
+import com.cyberpoint.repository.UserRepository;
+import com.cyberpoint.security.AuthoritiesConstants;
+import com.cyberpoint.service.UserService;
+import com.cyberpoint.service.dto.AdminUserDTO;
+import com.cyberpoint.service.dto.PasswordChangeDTO;
+import com.cyberpoint.service.dto.UserDTO;
+import com.cyberpoint.web.rest.vm.KeyAndPasswordVM;
+import com.cyberpoint.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

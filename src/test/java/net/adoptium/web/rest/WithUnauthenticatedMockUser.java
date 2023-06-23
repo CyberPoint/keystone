@@ -1,4 +1,4 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

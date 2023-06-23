@@ -1,4 +1,4 @@
-package net.adoptium.web.rest;
+package com.cyberpoint.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

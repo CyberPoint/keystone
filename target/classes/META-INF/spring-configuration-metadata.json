@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "application",
-      "type": "net.adoptium.config.ApplicationProperties",
-      "sourceType": "net.adoptium.config.ApplicationProperties"
+      "type": "com.cyberpoint.config.ApplicationProperties",
+      "sourceType": "com.cyberpoint.config.ApplicationProperties"
     }
   ],
   "properties": [],

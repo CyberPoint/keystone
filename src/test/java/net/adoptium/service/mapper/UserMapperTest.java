@@ -1,4 +1,4 @@
-package net.adoptium.service.mapper;
+package com.cyberpoint.service.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import net.adoptium.domain.User;
-import net.adoptium.service.dto.AdminUserDTO;
-import net.adoptium.service.dto.UserDTO;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.service.dto.AdminUserDTO;
+import com.cyberpoint.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,12 +1,12 @@
-package net.adoptium.security;
+package com.cyberpoint.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import java.util.Locale;
-import net.adoptium.IntegrationTest;
-import net.adoptium.domain.User;
-import net.adoptium.repository.UserRepository;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.domain.User;
+import com.cyberpoint.repository.UserRepository;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

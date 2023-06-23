@@ -1,14 +1,14 @@
-package net.adoptium.security.jwt;
+package com.cyberpoint.security.jwt;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import net.adoptium.config.SecurityConfiguration;
-import net.adoptium.config.SecurityJwtConfiguration;
-import net.adoptium.config.WebConfigurer;
-import net.adoptium.management.SecurityMetersService;
-import net.adoptium.web.rest.AuthenticateController;
+import com.cyberpoint.config.SecurityConfiguration;
+import com.cyberpoint.config.SecurityJwtConfiguration;
+import com.cyberpoint.config.WebConfigurer;
+import com.cyberpoint.management.SecurityMetersService;
+import com.cyberpoint.web.rest.AuthenticateController;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import tech.jhipster.config.JHipsterProperties;

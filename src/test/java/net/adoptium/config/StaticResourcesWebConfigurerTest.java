@@ -1,6 +1,6 @@
-package net.adoptium.config;
+package com.cyberpoint.config;
 
-import static net.adoptium.config.StaticResourcesWebConfiguration.*;
+import static com.cyberpoint.config.StaticResourcesWebConfiguration.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 

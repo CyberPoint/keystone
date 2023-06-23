@@ -1,4 +1,4 @@
-package net.adoptium.service;
+package com.cyberpoint.service;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -19,9 +19,9 @@ import java.nio.charset.Charset;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.adoptium.IntegrationTest;
-import net.adoptium.config.Constants;
-import net.adoptium.domain.User;
+import com.cyberpoint.IntegrationTest;
+import com.cyberpoint.config.Constants;
+import com.cyberpoint.domain.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;

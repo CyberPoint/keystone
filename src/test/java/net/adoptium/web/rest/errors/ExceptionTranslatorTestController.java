@@ -1,4 +1,4 @@
-package net.adoptium.web.rest.errors;
+package com.cyberpoint.web.rest.errors;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package net.adoptium.management;
+package com.cyberpoint.management;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
