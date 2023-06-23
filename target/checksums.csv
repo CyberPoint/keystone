@@ -229,6 +229,8 @@ src/main/webapp/swagger-ui/dist/images/throbber.gif,4defd79f66e824ab7a3dc0e17990
 src/main/webapp/swagger-ui/index.html,9a5d06282d8b2098e4df583d638b32ada5dd517b
 target/classes/static/account.08aeccc3.chunk.js,aeed43576ca572fb4f66cd82d7594fdda4d39470
 target/classes/static/account.08aeccc3.chunk.js.map,4a9f8716c673fa5114e51ee7b85b94add5e17942
+target/classes/static/administration.7708947d.chunk.js,9597f3287f82f0c368b3b9a048ce584b3d624372
+target/classes/static/administration.7708947d.chunk.js.map,567c77fe8bc8aa2e6ac8d442f34ad7c856f38ed0
 target/classes/static/administration.c1912094.chunk.js,b4a0ee0e722826b9a341105429c9938d0815e75e
 target/classes/static/administration.c1912094.chunk.js.map,11cf526a59ace6221b5077f63f7d562618d4bb43
 target/classes/static/content/css/loading.css,3ab1823dee0fef70192fbc9d5341dde0020a77a1
@@ -254,9 +256,11 @@ target/classes/static/content/images/jhipster_family_member_3_head-384.png,cf311
 target/classes/static/content/images/jhipster_family_member_3_head-512.png,97e81d97579be35f112fa057028887fbb80f962c
 target/classes/static/content/images/logo-jhipster.png,e1e46028ec092ca351425b07707fcdd52146b0b3
 target/classes/static/favicon.ico,69547cd4a95b59ac7e6818b6eb82befa061d0c16
-target/classes/static/i18n/en.json,2db4764ad28c3ef21c34f3dfabb61d717ece7aa8
-target/classes/static/i18n/fr.json,414d2e8ddbbc2a1543373a20bb0d49cadc17d7a0
-target/classes/static/index.html,b04acf41305aa3aca7e43955e869d23587ae12a8
+target/classes/static/i18n/en.json,d22d23120aabf3a2541b86b59aa4bb6a9dc83809
+target/classes/static/i18n/fr.json,43506c2485c5c36a379cdda0f36c7b2ee5a422f0
+target/classes/static/index.html,065c5a3d81483c064bd80e55b46959c03b81855a
+target/classes/static/main.9db5d018.js,3a44c20695058ba1c193b2cd0c8868e4a1851924
+target/classes/static/main.9db5d018.js.map,cf0504001f24dfc5a763daf1fe804879eebc33f6
 target/classes/static/main.fe49e56c.js,d5c53637557792d964dddf7c2124f820464b70bf
 target/classes/static/main.fe49e56c.js.map,64cb7c846a7b1c939128f07bb47ad0bd3a4e6968
 target/classes/static/manifest.webapp,8215969108153b953608a33e0c7fcd30cb212de5
