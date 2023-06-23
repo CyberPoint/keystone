@@ -7,6 +7,13 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entités",
+        "task": "Task",
+        "registrationEvent": "Registration Event",
+        "agent": "Agent",
+        "callBack": "Call Back",
+        "platform": "Platform",
+        "taskResult": "Task Result",
+        "registrationSecret": "Registration Secret",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

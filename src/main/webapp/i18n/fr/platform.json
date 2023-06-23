@@ -1,0 +1,31 @@
+{
+  "keyStoneApp": {
+    "platform": {
+      "home": {
+        "title": "Platforms",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Platform",
+        "createOrEditLabel": "Créer ou éditer un Platform",
+        "notFound": "Aucun Platform trouvé"
+      },
+      "created": "Un nouveau Platform a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Platform avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Platform avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Platform {{ id }} ?"
+      },
+      "detail": {
+        "title": "Platform"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "accessLevel": "Access Level",
+      "version": "Version",
+      "contents": "Contents",
+      "added": "Added",
+      "updated": "Updated",
+      "active": "Active"
+    }
+  }
+}

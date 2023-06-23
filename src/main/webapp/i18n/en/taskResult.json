@@ -1,0 +1,33 @@
+{
+  "keyStoneApp": {
+    "taskResult": {
+      "home": {
+        "title": "Task Results",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Result",
+        "createOrEditLabel": "Create or edit a Task Result",
+        "notFound": "No Task Results found"
+      },
+      "created": "A new Task Result is created with identifier {{ param }}",
+      "updated": "A Task Result is updated with identifier {{ param }}",
+      "deleted": "A Task Result is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Result"
+      },
+      "id": "ID",
+      "embeddeddata": "Embeddeddata",
+      "added": "Added",
+      "reviewed": "Reviewed",
+      "ipAddress": "Ip Address",
+      "headers": "Headers",
+      "url": "Url",
+      "task": "Task",
+      "help": {
+        "embeddeddata": "The firstname attribute."
+      }
+    }
+  }
+}

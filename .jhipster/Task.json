@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20230623154310",
+  "entityTableName": "task",
+  "fields": [
+    {
+      "fieldName": "command",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "formattedCommand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "submittedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "added",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updated",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "retrieved",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "failure",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "approved",
+      "fieldType": "Boolean"
+    }
+  ],
+  "javadoc": "Task entity.\\n@author The JHipster team.",
+  "name": "Task",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "taskResult",
+      "relationshipName": "result",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "agent",
+      "relationshipName": "agent",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

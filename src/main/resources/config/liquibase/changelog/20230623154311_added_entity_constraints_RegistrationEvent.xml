@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity RegistrationEvent.
+    -->
+    <changeSet id="20230623154311-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="agent_id"
+                                 baseTableName="registration_event"
+                                 constraintName="fk_registration_event__agent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agent"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="secret_id"
+                                 baseTableName="registration_event"
+                                 constraintName="fk_registration_event__secret_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="registration_secret"
+                                 />
+    </changeSet>
+</databaseChangeLog>

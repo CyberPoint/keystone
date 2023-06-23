@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20230623154315",
+  "entityTableName": "task_result",
+  "fields": [
+    {
+      "fieldName": "embeddeddata",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any",
+      "javadoc": "The firstname attribute."
+    },
+    {
+      "fieldName": "added",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "reviewed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "headers",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TaskResult",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

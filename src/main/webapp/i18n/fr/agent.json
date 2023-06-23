@@ -1,0 +1,34 @@
+{
+  "keyStoneApp": {
+    "agent": {
+      "home": {
+        "title": "Agents",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Agent",
+        "createOrEditLabel": "Créer ou éditer un Agent",
+        "notFound": "Aucun Agent trouvé"
+      },
+      "created": "Un nouveau Agent a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Agent avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Agent avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Agent {{ id }} ?"
+      },
+      "detail": {
+        "title": "Agent"
+      },
+      "id": "ID",
+      "name": "Name",
+      "classification": "Classification",
+      "description": "Description",
+      "installedOn": "Installed On",
+      "uninstallDate": "Uninstall Date",
+      "active": "Active",
+      "deactivate": "Deactivate",
+      "autoRegistered": "Auto Registered",
+      "approved": "Approved",
+      "platform": "Platform",
+      "registrationEvent": "Registration Event"
+    }
+  }
+}

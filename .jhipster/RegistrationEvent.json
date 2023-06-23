@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230623154311",
+  "entityTableName": "registration_event",
+  "fields": [
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "rawContents",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remotePort",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "approved",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "registrationDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "RegistrationEvent",
+  "relationships": [
+    {
+      "otherEntityName": "agent",
+      "relationshipName": "agent",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "registrationSecret",
+      "relationshipName": "secret",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
