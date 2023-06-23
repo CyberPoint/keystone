@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    com.cyberpoint: DEBUG
+    net.adoptium: DEBUG
 
 spring:
   devtools:
@@ -45,7 +45,7 @@ spring:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev
-    mail:
+  mail:
     host: localhost
     port: 25
     username:
