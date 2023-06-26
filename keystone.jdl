@@ -51,7 +51,7 @@ entity CallBack {
  */
 entity Task {
     command String,
-    formattedCommand String,
+    implantTaskId Integer,
     submittedBy String,
     description String,
     added Instant,

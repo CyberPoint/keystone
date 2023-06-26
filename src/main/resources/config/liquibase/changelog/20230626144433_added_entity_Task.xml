@@ -17,7 +17,7 @@
             <column name="command" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="formatted_command" type="varchar(255)">
+            <column name="implant_task_id" type="integer">
                 <constraints nullable="true" />
             </column>
             <column name="submitted_by" type="varchar(255)">
@@ -68,7 +68,7 @@
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="command" type="string"/>
-            <column name="formatted_command" type="string"/>
+            <column name="implant_task_id" type="numeric"/>
             <column name="submitted_by" type="string"/>
             <column name="description" type="string"/>
             <column name="added" type="date"/>

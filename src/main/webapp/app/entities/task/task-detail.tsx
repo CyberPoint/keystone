@@ -39,11 +39,11 @@ export const TaskDetail = () => {
           </dt>
           <dd>{taskEntity.command}</dd>
           <dt>
-            <span id="formattedCommand">
-              <Translate contentKey="keyStoneApp.task.formattedCommand">Formatted Command</Translate>
+            <span id="implantTaskId">
+              <Translate contentKey="keyStoneApp.task.implantTaskId">Implant Task Id</Translate>
             </span>
           </dt>
-          <dd>{taskEntity.formattedCommand}</dd>
+          <dd>{taskEntity.implantTaskId}</dd>
           <dt>
             <span id="submittedBy">
               <Translate contentKey="keyStoneApp.task.submittedBy">Submitted By</Translate>

@@ -31,8 +31,8 @@ public class Task implements Serializable {
     @Column(name = "command")
     private String command;
 
-    @Column(name = "formatted_command")
-    private String formattedCommand;
+    @Column(name = "implant_task_id")
+    private Integer implantTaskId;
 
     @Column(name = "submitted_by")
     private String submittedBy;
@@ -92,17 +92,17 @@ public class Task implements Serializable {
         this.command = command;
     }
 
-    public String getFormattedCommand() {
-        return this.formattedCommand;
+    public Integer getImplantTaskId() {
+        return this.implantTaskId;
     }
 
-    public Task formattedCommand(String formattedCommand) {
-        this.setFormattedCommand(formattedCommand);
+    public Task implantTaskId(Integer implantTaskId) {
+        this.setImplantTaskId(implantTaskId);
         return this;
     }
 
-    public void setFormattedCommand(String formattedCommand) {
-        this.formattedCommand = formattedCommand;
+    public void setImplantTaskId(Integer implantTaskId) {
+        this.implantTaskId = implantTaskId;
     }
 
     public String getSubmittedBy() {
@@ -265,7 +265,7 @@ public class Task implements Serializable {
         return "Task{" +
             "id=" + getId() +
             ", command='" + getCommand() + "'" +
-            ", formattedCommand='" + getFormattedCommand() + "'" +
+            ", implantTaskId=" + getImplantTaskId() +
             ", submittedBy='" + getSubmittedBy() + "'" +
             ", description='" + getDescription() + "'" +
             ", added='" + getAdded() + "'" +
