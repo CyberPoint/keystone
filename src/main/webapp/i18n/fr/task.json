@@ -19,7 +19,7 @@
       },
       "id": "ID",
       "command": "Command",
-      "implantTaskId": "Implant Task Id",
+      "formattedCommand": "Formatted Command",
       "submittedBy": "Submitted By",
       "description": "Description",
       "added": "Added",

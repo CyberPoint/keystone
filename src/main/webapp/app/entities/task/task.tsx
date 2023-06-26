@@ -135,9 +135,9 @@ export const Task = () => {
                     <Translate contentKey="keyStoneApp.task.command">Command</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('command')} />
                   </th>
-                  <th className="hand" onClick={sort('implantTaskId')}>
-                    <Translate contentKey="keyStoneApp.task.implantTaskId">Implant Task Id</Translate>{' '}
-                    <FontAwesomeIcon icon={getSortIconByFieldName('implantTaskId')} />
+                  <th className="hand" onClick={sort('formattedCommand')}>
+                    <Translate contentKey="keyStoneApp.task.formattedCommand">Formatted Command</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('formattedCommand')} />
                   </th>
                   <th className="hand" onClick={sort('submittedBy')}>
                     <Translate contentKey="keyStoneApp.task.submittedBy">Submitted By</Translate>{' '}
@@ -182,7 +182,7 @@ export const Task = () => {
                       </Button>
                     </td>
                     <td>{task.command}</td>
-                    <td>{task.implantTaskId}</td>
+                    <td>{task.formattedCommand}</td>
                     <td>{task.submittedBy}</td>
                     <td>{task.description}</td>
                     <td>{task.added ? <TextFormat type="date" value={task.added} format={APP_DATE_FORMAT} /> : null}</td>

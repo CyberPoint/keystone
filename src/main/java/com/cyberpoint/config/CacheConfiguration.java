@@ -56,6 +56,7 @@ public class CacheConfiguration {
             createCache(cm, com.cyberpoint.domain.Platform.class.getName());
             createCache(cm, com.cyberpoint.domain.TaskResult.class.getName());
             createCache(cm, com.cyberpoint.domain.RegistrationSecret.class.getName());
+            createCache(cm, com.cyberpoint.domain.Agent.class.getName() + ".tasks");
             // jhipster-needle-ehcache-add-entry
         };
     }

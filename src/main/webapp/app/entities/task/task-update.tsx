@@ -106,15 +106,13 @@ export const TaskUpdate = () => {
                 name="command"
                 data-cy="command"
                 type="text"
-                placeholder="ls -la"
               />
               <ValidatedField
-                label={translate('keyStoneApp.task.implantTaskId')}
-                id="task-implantTaskId"
-                name="implantTaskId"
-                data-cy="implantTaskId"
+                label={translate('keyStoneApp.task.formattedCommand')}
+                id="task-formattedCommand"
+                name="formattedCommand"
+                data-cy="formattedCommand"
                 type="text"
-                placeholder="Integer value for implant task id: i.e.: 72"
               />
               <ValidatedField
                 label={translate('keyStoneApp.task.submittedBy')}

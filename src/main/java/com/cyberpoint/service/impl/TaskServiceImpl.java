@@ -48,8 +48,8 @@ public class TaskServiceImpl implements TaskService {
                 if (task.getCommand() != null) {
                     existingTask.setCommand(task.getCommand());
                 }
-                if (task.getImplantTaskId() != null) {
-                    existingTask.setImplantTaskId(task.getImplantTaskId());
+                if (task.getFormattedCommand() != null) {
+                    existingTask.setFormattedCommand(task.getFormattedCommand());
                 }
                 if (task.getSubmittedBy() != null) {
                     existingTask.setSubmittedBy(task.getSubmittedBy());

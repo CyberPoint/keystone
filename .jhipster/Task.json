@@ -8,8 +8,8 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "implantTaskId",
-      "fieldType": "Integer"
+      "fieldName": "formattedCommand",
+      "fieldType": "String"
     },
     {
       "fieldName": "submittedBy",

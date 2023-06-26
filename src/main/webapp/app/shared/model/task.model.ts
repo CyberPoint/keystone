@@ -5,7 +5,7 @@ import { IAgent } from 'app/shared/model/agent.model';
 export interface ITask {
   id?: number;
   command?: string | null;
-  implantTaskId?: number | null;
+  formattedCommand?: string | null;
   submittedBy?: string | null;
   description?: string | null;
   added?: string | null;

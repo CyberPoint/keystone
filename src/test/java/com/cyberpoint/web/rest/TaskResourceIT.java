@@ -34,8 +34,8 @@ class TaskResourceIT {
     private static final String DEFAULT_COMMAND = "AAAAAAAAAA";
     private static final String UPDATED_COMMAND = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_IMPLANT_TASK_ID = 1;
-    private static final Integer UPDATED_IMPLANT_TASK_ID = 2;
+    private static final String DEFAULT_FORMATTED_COMMAND = "AAAAAAAAAA";
+    private static final String UPDATED_FORMATTED_COMMAND = "BBBBBBBBBB";
 
     private static final String DEFAULT_SUBMITTED_BY = "AAAAAAAAAA";
     private static final String UPDATED_SUBMITTED_BY = "BBBBBBBBBB";
@@ -84,7 +84,7 @@ class TaskResourceIT {
     public static Task createEntity(EntityManager em) {
         Task task = new Task()
             .command(DEFAULT_COMMAND)
-            .implantTaskId(DEFAULT_IMPLANT_TASK_ID)
+            .formattedCommand(DEFAULT_FORMATTED_COMMAND)
             .submittedBy(DEFAULT_SUBMITTED_BY)
             .description(DEFAULT_DESCRIPTION)
             .added(DEFAULT_ADDED)
@@ -104,7 +104,7 @@ class TaskResourceIT {
     public static Task createUpdatedEntity(EntityManager em) {
         Task task = new Task()
             .command(UPDATED_COMMAND)
-            .implantTaskId(UPDATED_IMPLANT_TASK_ID)
+            .formattedCommand(UPDATED_FORMATTED_COMMAND)
             .submittedBy(UPDATED_SUBMITTED_BY)
             .description(UPDATED_DESCRIPTION)
             .added(UPDATED_ADDED)
@@ -134,7 +134,7 @@ class TaskResourceIT {
         assertThat(taskList).hasSize(databaseSizeBeforeCreate + 1);
         Task testTask = taskList.get(taskList.size() - 1);
         assertThat(testTask.getCommand()).isEqualTo(DEFAULT_COMMAND);
-        assertThat(testTask.getImplantTaskId()).isEqualTo(DEFAULT_IMPLANT_TASK_ID);
+        assertThat(testTask.getFormattedCommand()).isEqualTo(DEFAULT_FORMATTED_COMMAND);
         assertThat(testTask.getSubmittedBy()).isEqualTo(DEFAULT_SUBMITTED_BY);
         assertThat(testTask.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testTask.getAdded()).isEqualTo(DEFAULT_ADDED);
@@ -175,7 +175,7 @@ class TaskResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(task.getId().intValue())))
             .andExpect(jsonPath("$.[*].command").value(hasItem(DEFAULT_COMMAND)))
-            .andExpect(jsonPath("$.[*].implantTaskId").value(hasItem(DEFAULT_IMPLANT_TASK_ID)))
+            .andExpect(jsonPath("$.[*].formattedCommand").value(hasItem(DEFAULT_FORMATTED_COMMAND)))
             .andExpect(jsonPath("$.[*].submittedBy").value(hasItem(DEFAULT_SUBMITTED_BY)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
             .andExpect(jsonPath("$.[*].added").value(hasItem(DEFAULT_ADDED.toString())))
@@ -198,7 +198,7 @@ class TaskResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(task.getId().intValue()))
             .andExpect(jsonPath("$.command").value(DEFAULT_COMMAND))
-            .andExpect(jsonPath("$.implantTaskId").value(DEFAULT_IMPLANT_TASK_ID))
+            .andExpect(jsonPath("$.formattedCommand").value(DEFAULT_FORMATTED_COMMAND))
             .andExpect(jsonPath("$.submittedBy").value(DEFAULT_SUBMITTED_BY))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION))
             .andExpect(jsonPath("$.added").value(DEFAULT_ADDED.toString()))
@@ -229,7 +229,7 @@ class TaskResourceIT {
         em.detach(updatedTask);
         updatedTask
             .command(UPDATED_COMMAND)
-            .implantTaskId(UPDATED_IMPLANT_TASK_ID)
+            .formattedCommand(UPDATED_FORMATTED_COMMAND)
             .submittedBy(UPDATED_SUBMITTED_BY)
             .description(UPDATED_DESCRIPTION)
             .added(UPDATED_ADDED)
@@ -251,7 +251,7 @@ class TaskResourceIT {
         assertThat(taskList).hasSize(databaseSizeBeforeUpdate);
         Task testTask = taskList.get(taskList.size() - 1);
         assertThat(testTask.getCommand()).isEqualTo(UPDATED_COMMAND);
-        assertThat(testTask.getImplantTaskId()).isEqualTo(UPDATED_IMPLANT_TASK_ID);
+        assertThat(testTask.getFormattedCommand()).isEqualTo(UPDATED_FORMATTED_COMMAND);
         assertThat(testTask.getSubmittedBy()).isEqualTo(UPDATED_SUBMITTED_BY);
         assertThat(testTask.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testTask.getAdded()).isEqualTo(UPDATED_ADDED);
@@ -329,7 +329,7 @@ class TaskResourceIT {
         Task partialUpdatedTask = new Task();
         partialUpdatedTask.setId(task.getId());
 
-        partialUpdatedTask.implantTaskId(UPDATED_IMPLANT_TASK_ID).submittedBy(UPDATED_SUBMITTED_BY).retrieved(UPDATED_RETRIEVED);
+        partialUpdatedTask.formattedCommand(UPDATED_FORMATTED_COMMAND).submittedBy(UPDATED_SUBMITTED_BY).retrieved(UPDATED_RETRIEVED);
 
         restTaskMockMvc
             .perform(
@@ -344,7 +344,7 @@ class TaskResourceIT {
         assertThat(taskList).hasSize(databaseSizeBeforeUpdate);
         Task testTask = taskList.get(taskList.size() - 1);
         assertThat(testTask.getCommand()).isEqualTo(DEFAULT_COMMAND);
-        assertThat(testTask.getImplantTaskId()).isEqualTo(UPDATED_IMPLANT_TASK_ID);
+        assertThat(testTask.getFormattedCommand()).isEqualTo(UPDATED_FORMATTED_COMMAND);
         assertThat(testTask.getSubmittedBy()).isEqualTo(UPDATED_SUBMITTED_BY);
         assertThat(testTask.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testTask.getAdded()).isEqualTo(DEFAULT_ADDED);
@@ -368,7 +368,7 @@ class TaskResourceIT {
 
         partialUpdatedTask
             .command(UPDATED_COMMAND)
-            .implantTaskId(UPDATED_IMPLANT_TASK_ID)
+            .formattedCommand(UPDATED_FORMATTED_COMMAND)
             .submittedBy(UPDATED_SUBMITTED_BY)
             .description(UPDATED_DESCRIPTION)
             .added(UPDATED_ADDED)
@@ -390,7 +390,7 @@ class TaskResourceIT {
         assertThat(taskList).hasSize(databaseSizeBeforeUpdate);
         Task testTask = taskList.get(taskList.size() - 1);
         assertThat(testTask.getCommand()).isEqualTo(UPDATED_COMMAND);
-        assertThat(testTask.getImplantTaskId()).isEqualTo(UPDATED_IMPLANT_TASK_ID);
+        assertThat(testTask.getFormattedCommand()).isEqualTo(UPDATED_FORMATTED_COMMAND);
         assertThat(testTask.getSubmittedBy()).isEqualTo(UPDATED_SUBMITTED_BY);
         assertThat(testTask.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testTask.getAdded()).isEqualTo(UPDATED_ADDED);
