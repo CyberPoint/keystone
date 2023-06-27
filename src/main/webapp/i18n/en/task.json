@@ -19,7 +19,7 @@
       },
       "id": "ID",
       "command": "Command",
-      "formattedCommand": "Formatted Command",
+      "implantTaskId": "Implant Task Id",
       "submittedBy": "Submitted By",
       "description": "Description",
       "added": "Added",
@@ -27,8 +27,7 @@
       "retrieved": "Retrieved",
       "failure": "Failure",
       "approved": "Approved",
-      "result": "Result",
-      "agent": "Agent"
+      "result": "Result"
     }
   }
 }

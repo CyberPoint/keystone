@@ -31,8 +31,8 @@ public class Task implements Serializable {
     @Column(name = "command")
     private String command;
 
-    @Column(name = "formatted_command")
-    private String formattedCommand;
+    @Column(name = "implant_task_id")
+    private Integer implantTaskId;
 
     @Column(name = "submitted_by")
     private String submittedBy;
@@ -59,10 +59,6 @@ public class Task implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "task" }, allowSetters = true)
     private Set<TaskResult> results = new HashSet<>();
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "platform", "registrationEvent" }, allowSetters = true)
-    private Agent agent;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -92,17 +88,17 @@ public class Task implements Serializable {
         this.command = command;
     }
 
-    public String getFormattedCommand() {
-        return this.formattedCommand;
+    public Integer getImplantTaskId() {
+        return this.implantTaskId;
     }
 
-    public Task formattedCommand(String formattedCommand) {
-        this.setFormattedCommand(formattedCommand);
+    public Task implantTaskId(Integer implantTaskId) {
+        this.setImplantTaskId(implantTaskId);
         return this;
     }
 
-    public void setFormattedCommand(String formattedCommand) {
-        this.formattedCommand = formattedCommand;
+    public void setImplantTaskId(Integer implantTaskId) {
+        this.implantTaskId = implantTaskId;
     }
 
     public String getSubmittedBy() {
@@ -227,19 +223,6 @@ public class Task implements Serializable {
         return this;
     }
 
-    public Agent getAgent() {
-        return this.agent;
-    }
-
-    public void setAgent(Agent agent) {
-        this.agent = agent;
-    }
-
-    public Task agent(Agent agent) {
-        this.setAgent(agent);
-        return this;
-    }
-
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -265,7 +248,7 @@ public class Task implements Serializable {
         return "Task{" +
             "id=" + getId() +
             ", command='" + getCommand() + "'" +
-            ", formattedCommand='" + getFormattedCommand() + "'" +
+            ", implantTaskId=" + getImplantTaskId() +
             ", submittedBy='" + getSubmittedBy() + "'" +
             ", description='" + getDescription() + "'" +
             ", added='" + getAdded() + "'" +

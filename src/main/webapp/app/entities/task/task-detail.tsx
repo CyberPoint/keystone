@@ -39,11 +39,11 @@ export const TaskDetail = () => {
           </dt>
           <dd>{taskEntity.command}</dd>
           <dt>
-            <span id="formattedCommand">
-              <Translate contentKey="keyStoneApp.task.formattedCommand">Formatted Command</Translate>
+            <span id="implantTaskId">
+              <Translate contentKey="keyStoneApp.task.implantTaskId">Implant Task Id</Translate>
             </span>
           </dt>
-          <dd>{taskEntity.formattedCommand}</dd>
+          <dd>{taskEntity.implantTaskId}</dd>
           <dt>
             <span id="submittedBy">
               <Translate contentKey="keyStoneApp.task.submittedBy">Submitted By</Translate>
@@ -86,10 +86,6 @@ export const TaskDetail = () => {
             </span>
           </dt>
           <dd>{taskEntity.approved ? 'true' : 'false'}</dd>
-          <dt>
-            <Translate contentKey="keyStoneApp.task.agent">Agent</Translate>
-          </dt>
-          <dd>{taskEntity.agent ? taskEntity.agent.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/task" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -8,8 +8,6 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAgent } from 'app/shared/model/agent.model';
-import { getEntities as getAgents } from 'app/entities/agent/agent.reducer';
 import { ITask } from 'app/shared/model/task.model';
 import { getEntity, updateEntity, createEntity, reset } from './task.reducer';
 
@@ -21,7 +19,6 @@ export const TaskUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
-  const agents = useAppSelector(state => state.agent.entities);
   const taskEntity = useAppSelector(state => state.task.entity);
   const loading = useAppSelector(state => state.task.loading);
   const updating = useAppSelector(state => state.task.updating);
@@ -35,8 +32,6 @@ export const TaskUpdate = () => {
     if (!isNew) {
       dispatch(getEntity(id));
     }
-
-    dispatch(getAgents({}));
   }, []);
 
   useEffect(() => {
@@ -52,7 +47,6 @@ export const TaskUpdate = () => {
     const entity = {
       ...taskEntity,
       ...values,
-      agent: agents.find(it => it.id.toString() === values.agent.toString()),
     };
 
     if (isNew) {
@@ -72,7 +66,6 @@ export const TaskUpdate = () => {
           ...taskEntity,
           added: convertDateTimeFromServer(taskEntity.added),
           updated: convertDateTimeFromServer(taskEntity.updated),
-          agent: taskEntity?.agent?.id,
         };
 
   return (
@@ -108,10 +101,10 @@ export const TaskUpdate = () => {
                 type="text"
               />
               <ValidatedField
-                label={translate('keyStoneApp.task.formattedCommand')}
-                id="task-formattedCommand"
-                name="formattedCommand"
-                data-cy="formattedCommand"
+                label={translate('keyStoneApp.task.implantTaskId')}
+                id="task-implantTaskId"
+                name="implantTaskId"
+                data-cy="implantTaskId"
                 type="text"
               />
               <ValidatedField
@@ -168,16 +161,6 @@ export const TaskUpdate = () => {
                 check
                 type="checkbox"
               />
-              <ValidatedField id="task-agent" name="agent" data-cy="agent" label={translate('keyStoneApp.task.agent')} type="select">
-                <option value="" key="0" />
-                {agents
-                  ? agents.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
-                      </option>
-                    ))
-                  : null}
-              </ValidatedField>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/task" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

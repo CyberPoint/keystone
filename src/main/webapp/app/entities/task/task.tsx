@@ -135,9 +135,9 @@ export const Task = () => {
                     <Translate contentKey="keyStoneApp.task.command">Command</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('command')} />
                   </th>
-                  <th className="hand" onClick={sort('formattedCommand')}>
-                    <Translate contentKey="keyStoneApp.task.formattedCommand">Formatted Command</Translate>{' '}
-                    <FontAwesomeIcon icon={getSortIconByFieldName('formattedCommand')} />
+                  <th className="hand" onClick={sort('implantTaskId')}>
+                    <Translate contentKey="keyStoneApp.task.implantTaskId">Implant Task Id</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('implantTaskId')} />
                   </th>
                   <th className="hand" onClick={sort('submittedBy')}>
                     <Translate contentKey="keyStoneApp.task.submittedBy">Submitted By</Translate>{' '}
@@ -167,9 +167,6 @@ export const Task = () => {
                     <Translate contentKey="keyStoneApp.task.approved">Approved</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('approved')} />
                   </th>
-                  <th>
-                    <Translate contentKey="keyStoneApp.task.agent">Agent</Translate> <FontAwesomeIcon icon="sort" />
-                  </th>
                   <th />
                 </tr>
               </thead>
@@ -182,7 +179,7 @@ export const Task = () => {
                       </Button>
                     </td>
                     <td>{task.command}</td>
-                    <td>{task.formattedCommand}</td>
+                    <td>{task.implantTaskId}</td>
                     <td>{task.submittedBy}</td>
                     <td>{task.description}</td>
                     <td>{task.added ? <TextFormat type="date" value={task.added} format={APP_DATE_FORMAT} /> : null}</td>
@@ -190,7 +187,6 @@ export const Task = () => {
                     <td>{task.retrieved ? 'true' : 'false'}</td>
                     <td>{task.failure ? 'true' : 'false'}</td>
                     <td>{task.approved ? 'true' : 'false'}</td>
-                    <td>{task.agent ? <Link to={`/agent/${task.agent.id}`}>{task.agent.id}</Link> : ''}</td>
                     <td className="text-end">
                       <div className="btn-group flex-btn-group-container">
                         <Button tag={Link} to={`/task/${task.id}`} color="info" size="sm" data-cy="entityDetailsButton">

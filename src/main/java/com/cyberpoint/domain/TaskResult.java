@@ -54,7 +54,7 @@ public class TaskResult implements Serializable {
     private String url;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "results", "agent" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "results" }, allowSetters = true)
     private Task task;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

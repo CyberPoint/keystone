@@ -81,7 +81,6 @@ relationship OneToMany {
 relationship ManyToOne {
     Agent{platform} to Platform
     CallBack{agent} to Agent,
-    Task{agent} to Agent,    
 }
 
 relationship OneToOne {

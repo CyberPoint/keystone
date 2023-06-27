@@ -1,11 +1,10 @@
 import dayjs from 'dayjs';
 import { ITaskResult } from 'app/shared/model/task-result.model';
-import { IAgent } from 'app/shared/model/agent.model';
 
 export interface ITask {
   id?: number;
   command?: string | null;
-  formattedCommand?: string | null;
+  implantTaskId?: number | null;
   submittedBy?: string | null;
   description?: string | null;
   added?: string | null;
@@ -14,7 +13,6 @@ export interface ITask {
   failure?: boolean | null;
   approved?: boolean | null;
   results?: ITaskResult[] | null;
-  agent?: IAgent | null;
 }
 
 export const defaultValue: Readonly<ITask> = {
