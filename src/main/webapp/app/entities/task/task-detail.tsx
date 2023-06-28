@@ -86,6 +86,10 @@ export const TaskDetail = () => {
             </span>
           </dt>
           <dd>{taskEntity.approved ? 'true' : 'false'}</dd>
+          <dt>
+            <Translate contentKey="keyStoneApp.task.agent">Agent</Translate>
+          </dt>
+          <dd>{taskEntity.agent ? taskEntity.agent.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/task" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -60,6 +60,10 @@ public class Task implements Serializable {
     @JsonIgnoreProperties(value = { "task" }, allowSetters = true)
     private Set<TaskResult> results = new HashSet<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties(value = { "tasks", "platform", "registrationEvent" }, allowSetters = true)
+    private Agent agent;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -220,6 +224,19 @@ public class Task implements Serializable {
     public Task removeResult(TaskResult taskResult) {
         this.results.remove(taskResult);
         taskResult.setTask(null);
+        return this;
+    }
+
+    public Agent getAgent() {
+        return this.agent;
+    }
+
+    public void setAgent(Agent agent) {
+        this.agent = agent;
+    }
+
+    public Task agent(Agent agent) {
+        this.setAgent(agent);
         return this;
     }
 

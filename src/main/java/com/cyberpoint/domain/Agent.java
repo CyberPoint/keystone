@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -52,6 +54,11 @@ public class Agent implements Serializable {
 
     @Column(name = "approved")
     private Boolean approved;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "agent")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "results", "agent" }, allowSetters = true)
+    private Set<Task> tasks = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Platform platform;
@@ -190,6 +197,37 @@ public class Agent implements Serializable {
 
     public void setApproved(Boolean approved) {
         this.approved = approved;
+    }
+
+    public Set<Task> getTasks() {
+        return this.tasks;
+    }
+
+    public void setTasks(Set<Task> tasks) {
+        if (this.tasks != null) {
+            this.tasks.forEach(i -> i.setAgent(null));
+        }
+        if (tasks != null) {
+            tasks.forEach(i -> i.setAgent(this));
+        }
+        this.tasks = tasks;
+    }
+
+    public Agent tasks(Set<Task> tasks) {
+        this.setTasks(tasks);
+        return this;
+    }
+
+    public Agent addTask(Task task) {
+        this.tasks.add(task);
+        task.setAgent(this);
+        return this;
+    }
+
+    public Agent removeTask(Task task) {
+        this.tasks.remove(task);
+        task.setAgent(null);
+        return this;
     }
 
     public Platform getPlatform() {

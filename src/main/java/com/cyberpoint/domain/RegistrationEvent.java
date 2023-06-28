@@ -44,7 +44,7 @@ public class RegistrationEvent implements Serializable {
     @Column(name = "registration_date")
     private Instant registrationDate;
 
-    @JsonIgnoreProperties(value = { "platform", "registrationEvent" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "tasks", "platform", "registrationEvent" }, allowSetters = true)
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(unique = true)
     private Agent agent;

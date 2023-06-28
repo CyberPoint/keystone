@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { ITask } from 'app/shared/model/task.model';
 import { IPlatform } from 'app/shared/model/platform.model';
 import { IRegistrationEvent } from 'app/shared/model/registration-event.model';
 
@@ -13,6 +14,7 @@ export interface IAgent {
   deactivate?: boolean | null;
   autoRegistered?: boolean | null;
   approved?: boolean | null;
+  tasks?: ITask[] | null;
   platform?: IPlatform | null;
   registrationEvent?: IRegistrationEvent | null;
 }

@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import { ITaskResult } from 'app/shared/model/task-result.model';
+import { IAgent } from 'app/shared/model/agent.model';
 
 export interface ITask {
   id?: number;
@@ -13,6 +14,7 @@ export interface ITask {
   failure?: boolean | null;
   approved?: boolean | null;
   results?: ITaskResult[] | null;
+  agent?: IAgent | null;
 }
 
 export const defaultValue: Readonly<ITask> = {

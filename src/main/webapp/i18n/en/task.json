@@ -27,7 +27,8 @@
       "retrieved": "Retrieved",
       "failure": "Failure",
       "approved": "Approved",
-      "result": "Result"
+      "result": "Result",
+      "agent": "Agent"
     }
   }
 }

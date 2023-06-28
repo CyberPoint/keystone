@@ -27,6 +27,7 @@
       "deactivate": "Deactivate",
       "autoRegistered": "Auto Registered",
       "approved": "Approved",
+      "task": "Task",
       "platform": "Platform",
       "registrationEvent": "Registration Event"
     }

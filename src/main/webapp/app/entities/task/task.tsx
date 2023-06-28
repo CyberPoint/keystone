@@ -167,6 +167,9 @@ export const Task = () => {
                     <Translate contentKey="keyStoneApp.task.approved">Approved</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('approved')} />
                   </th>
+                  <th>
+                    <Translate contentKey="keyStoneApp.task.agent">Agent</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th />
                 </tr>
               </thead>
@@ -187,6 +190,7 @@ export const Task = () => {
                     <td>{task.retrieved ? 'true' : 'false'}</td>
                     <td>{task.failure ? 'true' : 'false'}</td>
                     <td>{task.approved ? 'true' : 'false'}</td>
+                    <td>{task.agent ? <Link to={`/agent/${task.agent.id}`}>{task.agent.id}</Link> : ''}</td>
                     <td className="text-end">
                       <div className="btn-group flex-btn-group-container">
                         <Button tag={Link} to={`/task/${task.id}`} color="info" size="sm" data-cy="entityDetailsButton">

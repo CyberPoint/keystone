@@ -49,7 +49,7 @@ public class CallBack implements Serializable {
     private String rawcontentsContentType;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "platform", "registrationEvent" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "tasks", "platform", "registrationEvent" }, allowSetters = true)
     private Agent agent;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
