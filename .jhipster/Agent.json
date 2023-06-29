@@ -45,6 +45,12 @@
   "pagination": "pagination",
   "relationships": [
     {
+      "otherEntityName": "task",
+      "relationshipName": "task",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
       "otherEntityName": "platform",
       "relationshipName": "platform",
       "relationshipSide": "left",

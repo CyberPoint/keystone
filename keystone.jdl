@@ -76,12 +76,12 @@ entity TaskResult {
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
     Task{result} to TaskResult,
+    Agent{task} to Task,
 }
 
 relationship ManyToOne {
     Agent{platform} to Platform
     CallBack{agent} to Agent,
-    Task{agent} to Agent,    
 }
 
 relationship OneToOne {

@@ -106,7 +106,6 @@ export const TaskUpdate = () => {
                 name="command"
                 data-cy="command"
                 type="text"
-                placeholder="ls -la"
               />
               <ValidatedField
                 label={translate('keyStoneApp.task.implantTaskId')}
@@ -114,7 +113,6 @@ export const TaskUpdate = () => {
                 name="implantTaskId"
                 data-cy="implantTaskId"
                 type="text"
-                placeholder="Integer value for implant task id: i.e.: 72"
               />
               <ValidatedField
                 label={translate('keyStoneApp.task.submittedBy')}
@@ -174,8 +172,8 @@ export const TaskUpdate = () => {
                 <option value="" key="0" />
                 {agents
                   ? agents.map(otherEntity => (
-                      <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                      <option value={otherEntity.name} key={otherEntity.name}>
+                        {otherEntity.name}
                       </option>
                     ))
                   : null}

@@ -55,11 +55,13 @@ public class SecurityConfiguration {
                 authz
                     .requestMatchers("/", "/index.html", "/*.js", "/*.map", "/*.css").permitAll()
                     .requestMatchers("/*.ico", "/*.png", "/*.svg", "/*.webapp").permitAll()
+                    
                     .requestMatchers("/app/**").permitAll()
                     .requestMatchers("/i18n/**").permitAll()
                     .requestMatchers("/content/**").permitAll()
                     .requestMatchers("/swagger-ui/**").permitAll()
                     .requestMatchers("/h2-console/**").permitAll()
+                    .requestMatchers( "/api/crocs/**" ).permitAll( )
                     .requestMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
                     .requestMatchers(HttpMethod.GET, "/api/authenticate").permitAll()
                     .requestMatchers("/api/register").permitAll()

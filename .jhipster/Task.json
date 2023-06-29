@@ -49,12 +49,6 @@
       "relationshipName": "result",
       "relationshipSide": "left",
       "relationshipType": "one-to-many"
-    },
-    {
-      "otherEntityName": "agent",
-      "relationshipName": "agent",
-      "relationshipSide": "left",
-      "relationshipType": "many-to-one"
     }
   ],
   "searchEngine": "no",
