@@ -50,6 +50,22 @@ Add the `help` flag on any command to see how you can use it. For example, `npm 
 
 The `npm run` command will list all of the scripts available to run for this project.
 
+2. [jdk-17.0.7][]: We use JDK as the development platform for building Java applications. The JDK is an implementation of the Java platform specification, which includes the compiler and standard class libraries. 
+
+JHipster requires jdk-17 or later, you can install the JDK either from source or as a pre-packaged bundle.
+
+Linux:
+
+```
+sudo apt install openjdk-17-jre-headless
+```
+
+The JRE inside your JDK adds the java command to your command line. Verify your version.
+
+```
+java --version
+```
+
 ### PWA Support
 
 JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
@@ -233,3 +249,4 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Jest]: https://facebook.github.io/jest/
 [Leaflet]: https://leafletjs.com/
 [DefinitelyTyped]: https://definitelytyped.org/
+[jdk-17.0.7]: https://adoptium.net/temurin/releases/?version=17
