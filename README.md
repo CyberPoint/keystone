@@ -1,4 +1,4 @@
-
+# KeyStone
 ![KeyStone](/logo-keystone.png "KeyStone")
 
 This application was generated using JHipster 8.0.0-beta.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.0.0-beta.1](https://www.jhipster.tech/documentation-archive/v8.0.0-beta.1).
