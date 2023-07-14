@@ -33,6 +33,7 @@ import com.cyberpoint.service.RegistrationSecretService;
 import com.cyberpoint.service.TaskResultService;
 import com.cyberpoint.service.TaskService;
 
+import jakarta.servlet.http.HttpServletRequest;
 import tech.jhipster.web.util.PaginationUtil;
 
 /**
@@ -85,13 +86,17 @@ public class CrocResource {
     }
     
     @PostMapping("/results")
-    public ResponseEntity<Task> updateTask(@RequestBody Task taskResult) {
+    public ResponseEntity<Task> updateTask(@RequestBody Task taskResult, HttpServletRequest request) {
         Optional<Task> existingTask = taskService.findOne(taskResult.getId());
         if (existingTask.isPresent()) {
             Task task = existingTask.get();
             task.setApproved(taskResult.getApproved());
             task.setFailure(taskResult.getFailure());
             task.setRetrieved(taskResult.getRetrieved());
+
+            String clientIp = request.getRemoteAddr();
+            task.setDescription(clientIp);
+
             taskService.save(task);
             return ResponseEntity.ok(task);
         } else {
