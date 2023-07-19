@@ -1,5 +1,6 @@
 package com.cyberpoint.web.rest;
 
+import java.util.Map;
 import java.util.List;
 import java.util.Optional;
 
@@ -86,22 +87,52 @@ public class CrocResource {
     }
     
     @PostMapping("/results")
-    public ResponseEntity<Task> updateTask(@RequestBody Task taskResult, HttpServletRequest request) {
-        Optional<Task> existingTask = taskService.findOne(taskResult.getId());
-        if (existingTask.isPresent()) {
+    public ResponseEntity<TaskResult> updateTask(@RequestBody Map<String,Object> taskResult, HttpServletRequest request) {
+    	log.debug(taskResult.toString());
+    	
+    	TaskResult taskResultObj = new TaskResult();
+    	Map<String,Object> taskMap = (Map<String,Object>) taskResult.get("taskMap");
+    	Long i = new Long( (Integer)taskMap.get("id"));
+    	
+    	Optional<Task> existingTask = taskService.findOne(i.longValue());
+    	  
+	  	if (existingTask.isPresent()) {
             Task task = existingTask.get();
-            task.setApproved(taskResult.getApproved());
-            task.setFailure(taskResult.getFailure());
-            task.setRetrieved(taskResult.getRetrieved());
+            task.setApproved(task.getApproved());
+            task.setFailure(task.getFailure());
+            task.setRetrieved(task.getRetrieved());
 
             String clientIp = request.getRemoteAddr();
             task.setDescription(clientIp);
 
+            String s = (String) taskResult.get("embeddedResult");
+            taskResultObj.setIpAddress(clientIp);
+            taskResultObj.setTask(task);
+            taskResultObj.setEmbeddeddata(s.getBytes());
+            
             taskService.save(task);
-            return ResponseEntity.ok(task);
+	  		taskResultService.save(taskResultObj); //jackson
+
+            return ResponseEntity.ok(taskResultObj);
         } else {
             return ResponseEntity.notFound().build();
         }
+	  	
+//        Optional<Task> existingTask = taskService.findOne(taskResult.getId());
+//        if (existingTask.isPresent()) {
+//            Task task = existingTask.get();
+//            task.setApproved(taskResult.getApproved());
+//            task.setFailure(taskResult.getFailure());
+//            task.setRetrieved(taskResult.getRetrieved());
+//
+//            String clientIp = request.getRemoteAddr();
+//            task.setDescription(clientIp);
+//
+//            taskService.save(task);
+//            return ResponseEntity.ok(task);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
     }
 
     

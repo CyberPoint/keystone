@@ -64,6 +64,7 @@ entity Task {
 entity TaskResult {
     /**
     * The firstname attribute.
+    * String not blob, var(Contents) -> string. 
     */
     embeddeddata Blob,
     added Instant,
