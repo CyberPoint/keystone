@@ -4,7 +4,7 @@ entity Platform {
     accessLevel Long required min(1) max(10),
     version String,
     //https://blog.ippon.tech/create-a-simple-file-storage-through-database-with-jhipster/
-    contents Blob,
+    os Blob,
     added Instant,
     updated Instant,
     active Boolean,
@@ -71,7 +71,8 @@ entity TaskResult {
     reviewed Boolean,
     ipAddress String required,
     headers String,
-    url  String,    
+    url  String,
+    content String,    
 }
 
 // defining multiple OneToMany relationships with comments

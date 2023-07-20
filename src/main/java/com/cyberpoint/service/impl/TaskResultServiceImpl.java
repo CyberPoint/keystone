@@ -66,6 +66,9 @@ public class TaskResultServiceImpl implements TaskResultService {
                 if (taskResult.getUrl() != null) {
                     existingTaskResult.setUrl(taskResult.getUrl());
                 }
+                if (taskResult.getContent() != null) {
+                    existingTaskResult.setContent(taskResult.getContent());
+                }
 
                 return existingTaskResult;
             })

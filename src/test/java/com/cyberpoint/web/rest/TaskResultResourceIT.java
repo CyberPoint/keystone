@@ -52,6 +52,9 @@ class TaskResultResourceIT {
     private static final String DEFAULT_URL = "AAAAAAAAAA";
     private static final String UPDATED_URL = "BBBBBBBBBB";
 
+    private static final String DEFAULT_CONTENT = "AAAAAAAAAA";
+    private static final String UPDATED_CONTENT = "BBBBBBBBBB";
+
     private static final String ENTITY_API_URL = "/api/task-results";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -83,7 +86,8 @@ class TaskResultResourceIT {
             .reviewed(DEFAULT_REVIEWED)
             .ipAddress(DEFAULT_IP_ADDRESS)
             .headers(DEFAULT_HEADERS)
-            .url(DEFAULT_URL);
+            .url(DEFAULT_URL)
+            .content(DEFAULT_CONTENT);
         return taskResult;
     }
 
@@ -101,7 +105,8 @@ class TaskResultResourceIT {
             .reviewed(UPDATED_REVIEWED)
             .ipAddress(UPDATED_IP_ADDRESS)
             .headers(UPDATED_HEADERS)
-            .url(UPDATED_URL);
+            .url(UPDATED_URL)
+            .content(UPDATED_CONTENT);
         return taskResult;
     }
 
@@ -130,6 +135,7 @@ class TaskResultResourceIT {
         assertThat(testTaskResult.getIpAddress()).isEqualTo(DEFAULT_IP_ADDRESS);
         assertThat(testTaskResult.getHeaders()).isEqualTo(DEFAULT_HEADERS);
         assertThat(testTaskResult.getUrl()).isEqualTo(DEFAULT_URL);
+        assertThat(testTaskResult.getContent()).isEqualTo(DEFAULT_CONTENT);
     }
 
     @Test
@@ -185,7 +191,8 @@ class TaskResultResourceIT {
             .andExpect(jsonPath("$.[*].reviewed").value(hasItem(DEFAULT_REVIEWED.booleanValue())))
             .andExpect(jsonPath("$.[*].ipAddress").value(hasItem(DEFAULT_IP_ADDRESS)))
             .andExpect(jsonPath("$.[*].headers").value(hasItem(DEFAULT_HEADERS)))
-            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL)));
+            .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL)))
+            .andExpect(jsonPath("$.[*].content").value(hasItem(DEFAULT_CONTENT)));
     }
 
     @Test
@@ -206,7 +213,8 @@ class TaskResultResourceIT {
             .andExpect(jsonPath("$.reviewed").value(DEFAULT_REVIEWED.booleanValue()))
             .andExpect(jsonPath("$.ipAddress").value(DEFAULT_IP_ADDRESS))
             .andExpect(jsonPath("$.headers").value(DEFAULT_HEADERS))
-            .andExpect(jsonPath("$.url").value(DEFAULT_URL));
+            .andExpect(jsonPath("$.url").value(DEFAULT_URL))
+            .andExpect(jsonPath("$.content").value(DEFAULT_CONTENT));
     }
 
     @Test
@@ -235,7 +243,8 @@ class TaskResultResourceIT {
             .reviewed(UPDATED_REVIEWED)
             .ipAddress(UPDATED_IP_ADDRESS)
             .headers(UPDATED_HEADERS)
-            .url(UPDATED_URL);
+            .url(UPDATED_URL)
+            .content(UPDATED_CONTENT);
 
         restTaskResultMockMvc
             .perform(
@@ -256,6 +265,7 @@ class TaskResultResourceIT {
         assertThat(testTaskResult.getIpAddress()).isEqualTo(UPDATED_IP_ADDRESS);
         assertThat(testTaskResult.getHeaders()).isEqualTo(UPDATED_HEADERS);
         assertThat(testTaskResult.getUrl()).isEqualTo(UPDATED_URL);
+        assertThat(testTaskResult.getContent()).isEqualTo(UPDATED_CONTENT);
     }
 
     @Test
@@ -351,6 +361,7 @@ class TaskResultResourceIT {
         assertThat(testTaskResult.getIpAddress()).isEqualTo(DEFAULT_IP_ADDRESS);
         assertThat(testTaskResult.getHeaders()).isEqualTo(UPDATED_HEADERS);
         assertThat(testTaskResult.getUrl()).isEqualTo(UPDATED_URL);
+        assertThat(testTaskResult.getContent()).isEqualTo(DEFAULT_CONTENT);
     }
 
     @Test
@@ -372,7 +383,8 @@ class TaskResultResourceIT {
             .reviewed(UPDATED_REVIEWED)
             .ipAddress(UPDATED_IP_ADDRESS)
             .headers(UPDATED_HEADERS)
-            .url(UPDATED_URL);
+            .url(UPDATED_URL)
+            .content(UPDATED_CONTENT);
 
         restTaskResultMockMvc
             .perform(
@@ -393,6 +405,7 @@ class TaskResultResourceIT {
         assertThat(testTaskResult.getIpAddress()).isEqualTo(UPDATED_IP_ADDRESS);
         assertThat(testTaskResult.getHeaders()).isEqualTo(UPDATED_HEADERS);
         assertThat(testTaskResult.getUrl()).isEqualTo(UPDATED_URL);
+        assertThat(testTaskResult.getContent()).isEqualTo(UPDATED_CONTENT);
     }
 
     @Test

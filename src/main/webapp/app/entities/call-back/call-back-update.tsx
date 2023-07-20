@@ -147,8 +147,8 @@ export const CallBackUpdate = () => {
                 <option value="" key="0" />
                 {agents
                   ? agents.map(otherEntity => (
-                      <option value={otherEntity.name} key={otherEntity.name}>
-                        {otherEntity.name}
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
                       </option>
                     ))
                   : null}

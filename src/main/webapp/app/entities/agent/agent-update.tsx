@@ -188,8 +188,8 @@ export const AgentUpdate = () => {
                 <option value="" key="0" />
                 {platforms
                   ? platforms.map(otherEntity => (
-                      <option value={otherEntity.name} key={otherEntity.name}>
-                        {otherEntity.name}
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
                       </option>
                     ))
                   : null}

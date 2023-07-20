@@ -142,6 +142,13 @@ export const TaskResultUpdate = () => {
               />
               <ValidatedField label={translate('keyStoneApp.taskResult.url')} id="task-result-url" name="url" data-cy="url" type="text" />
               <ValidatedField
+                label={translate('keyStoneApp.taskResult.content')}
+                id="task-result-content"
+                name="content"
+                data-cy="content"
+                type="text"
+              />
+              <ValidatedField
                 id="task-result-task"
                 name="task"
                 data-cy="task"

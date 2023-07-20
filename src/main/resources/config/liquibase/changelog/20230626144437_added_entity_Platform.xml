@@ -26,10 +26,10 @@
             <column name="version" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="contents" type="${blobType}">
+            <column name="os" type="${blobType}">
                 <constraints nullable="true" />
             </column>
-            <column name="contents_content_type" type="varchar(255)">
+            <column name="os_content_type" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="added" type="${datetimeType}">
@@ -68,8 +68,8 @@
             <column name="description" type="string"/>
             <column name="access_level" type="numeric"/>
             <column name="version" type="string"/>
-            <column name="contents" type="blob"/>
-            <column name="contents_content_type" type="string"/>
+            <column name="os" type="blob"/>
+            <column name="os_content_type" type="string"/>
             <column name="added" type="date"/>
             <column name="updated" type="date"/>
             <column name="active" type="boolean"/>

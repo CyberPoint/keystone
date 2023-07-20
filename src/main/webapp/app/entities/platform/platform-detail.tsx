@@ -57,20 +57,20 @@ export const PlatformDetail = () => {
           </dt>
           <dd>{platformEntity.version}</dd>
           <dt>
-            <span id="contents">
-              <Translate contentKey="keyStoneApp.platform.contents">Contents</Translate>
+            <span id="os">
+              <Translate contentKey="keyStoneApp.platform.os">Os</Translate>
             </span>
           </dt>
           <dd>
-            {platformEntity.contents ? (
+            {platformEntity.os ? (
               <div>
-                {platformEntity.contentsContentType ? (
-                  <a onClick={openFile(platformEntity.contentsContentType, platformEntity.contents)}>
+                {platformEntity.osContentType ? (
+                  <a onClick={openFile(platformEntity.osContentType, platformEntity.os)}>
                     <Translate contentKey="entity.action.open">Open</Translate>&nbsp;
                   </a>
                 ) : null}
                 <span>
-                  {platformEntity.contentsContentType}, {byteSize(platformEntity.contents)}
+                  {platformEntity.osContentType}, {byteSize(platformEntity.os)}
                 </span>
               </div>
             ) : null}

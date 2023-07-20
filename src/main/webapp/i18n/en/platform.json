@@ -22,7 +22,7 @@
       "description": "Description",
       "accessLevel": "Access Level",
       "version": "Version",
-      "contents": "Contents",
+      "os": "Os",
       "added": "Added",
       "updated": "Updated",
       "active": "Active"
