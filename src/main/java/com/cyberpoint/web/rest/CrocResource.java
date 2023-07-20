@@ -1,6 +1,7 @@
 package com.cyberpoint.web.rest;
 
 import java.util.Map;
+import java.util.Enumeration;
 import java.util.List;
 import java.util.Optional;
 
@@ -88,19 +89,52 @@ public class CrocResource {
     
     @PostMapping("/results")
     public ResponseEntity<TaskResult> updateTask(@RequestBody Map<String,Object> taskResult, HttpServletRequest request) {
-    	log.debug(taskResult.toString());
-    	
-    	TaskResult taskResultObj = new TaskResult();
-    	Map<String,Object> taskMap = (Map<String,Object>) taskResult.get("taskMap");
-    	Long i = new Long( (Integer)taskMap.get("id"));
-    	
-    	Optional<Task> existingTask = taskService.findOne(i.longValue());
-    	  
-	  	if (existingTask.isPresent()) {
+        log.debug(taskResult.toString());
+        
+        TaskResult taskResultObj = new TaskResult();
+
+        // Extract headers from the request
+        Enumeration<String> headerNames = request.getHeaderNames();
+        StringBuilder headers = new StringBuilder();
+        while (headerNames.hasMoreElements()) {
+            String headerName = headerNames.nextElement();
+            String headerValue = request.getHeader(headerName);
+            headers.append(headerName).append(": ").append(headerValue).append("\n");
+        }
+
+        // Set headers in the TaskResult object
+        taskResultObj.setHeaders(headers.toString());
+
+        Map<String,Object> taskMap = (Map<String,Object>) taskResult.get("taskMap");
+        Long i = new Long( (Integer)taskMap.get("id"));
+        
+        Optional<Task> existingTask = taskService.findOne(i.longValue());
+          
+        if (existingTask.isPresent()) {
             Task task = existingTask.get();
-            task.setApproved(task.getApproved());
-            task.setFailure(task.getFailure());
-            task.setRetrieved(task.getRetrieved());
+//            task.setApproved(task.getApproved());
+//            task.setFailure(task.getFailure());
+//            task.setRetrieved(task.getRetrieved());
+
+            // Save the updated Task entity
+            Object approvedObj = taskResult.get("approved");
+            Object failureObj = taskResult.get("failure");
+            Object retrievedObj = taskResult.get("retrieved");
+            
+            Boolean approved = approvedObj instanceof Boolean ? (Boolean) approvedObj : Boolean.parseBoolean((String) approvedObj);
+            Boolean failure = failureObj instanceof Boolean ? (Boolean) failureObj : Boolean.parseBoolean((String) failureObj);
+            Boolean retrieved = retrievedObj instanceof Boolean ? (Boolean) retrievedObj : Boolean.parseBoolean((String) retrievedObj);
+            
+            if (approved != null) {
+                task.setApproved(approved);
+            }
+            if (failure != null) {
+                task.setFailure(failure);
+            }
+            if (retrieved != null) {
+                task.setRetrieved(retrieved);
+            }
+
 
             String clientIp = request.getRemoteAddr();
             task.setDescription(clientIp);
@@ -112,15 +146,16 @@ public class CrocResource {
             
             String content = (String) taskResult.get("content");
             taskResultObj.setContent(content);
-
             
             taskService.save(task);
-	  		taskResultService.save(taskResultObj); //jackson
+            taskResultService.save(taskResultObj); //jackson
 
             return ResponseEntity.ok(taskResultObj);
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
 	  	
 //        Optional<Task> existingTask = taskService.findOne(taskResult.getId());
 //        if (existingTask.isPresent()) {
@@ -137,7 +172,7 @@ public class CrocResource {
 //        } else {
 //            return ResponseEntity.notFound().build();
 //        }
-    }
+   
 
     
     public CrocResource(
