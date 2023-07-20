@@ -110,6 +110,10 @@ public class CrocResource {
             taskResultObj.setTask(task);
             taskResultObj.setEmbeddeddata(s.getBytes());
             
+            String content = (String) taskResult.get("content");
+            taskResultObj.setContent(content);
+
+            
             taskService.save(task);
 	  		taskResultService.save(taskResultObj); //jackson
 
