@@ -41,11 +41,11 @@ public class Platform implements Serializable {
     private String version;
 
     @Lob
-    @Column(name = "contents")
-    private byte[] contents;
+    @Column(name = "os")
+    private byte[] os;
 
-    @Column(name = "contents_content_type")
-    private String contentsContentType;
+    @Column(name = "os_content_type")
+    private String osContentType;
 
     @Column(name = "added")
     private Instant added;
@@ -123,30 +123,30 @@ public class Platform implements Serializable {
         this.version = version;
     }
 
-    public byte[] getContents() {
-        return this.contents;
+    public byte[] getOs() {
+        return this.os;
     }
 
-    public Platform contents(byte[] contents) {
-        this.setContents(contents);
+    public Platform os(byte[] os) {
+        this.setOs(os);
         return this;
     }
 
-    public void setContents(byte[] contents) {
-        this.contents = contents;
+    public void setOs(byte[] os) {
+        this.os = os;
     }
 
-    public String getContentsContentType() {
-        return this.contentsContentType;
+    public String getOsContentType() {
+        return this.osContentType;
     }
 
-    public Platform contentsContentType(String contentsContentType) {
-        this.contentsContentType = contentsContentType;
+    public Platform osContentType(String osContentType) {
+        this.osContentType = osContentType;
         return this;
     }
 
-    public void setContentsContentType(String contentsContentType) {
-        this.contentsContentType = contentsContentType;
+    public void setOsContentType(String osContentType) {
+        this.osContentType = osContentType;
     }
 
     public Instant getAdded() {
@@ -216,8 +216,8 @@ public class Platform implements Serializable {
             ", description='" + getDescription() + "'" +
             ", accessLevel=" + getAccessLevel() +
             ", version='" + getVersion() + "'" +
-            ", contents='" + getContents() + "'" +
-            ", contentsContentType='" + getContentsContentType() + "'" +
+            ", os='" + getOs() + "'" +
+            ", osContentType='" + getOsContentType() + "'" +
             ", added='" + getAdded() + "'" +
             ", updated='" + getUpdated() + "'" +
             ", active='" + getActive() + "'" +

@@ -44,10 +44,10 @@ class PlatformResourceIT {
     private static final String DEFAULT_VERSION = "AAAAAAAAAA";
     private static final String UPDATED_VERSION = "BBBBBBBBBB";
 
-    private static final byte[] DEFAULT_CONTENTS = TestUtil.createByteArray(1, "0");
-    private static final byte[] UPDATED_CONTENTS = TestUtil.createByteArray(1, "1");
-    private static final String DEFAULT_CONTENTS_CONTENT_TYPE = "image/jpg";
-    private static final String UPDATED_CONTENTS_CONTENT_TYPE = "image/png";
+    private static final byte[] DEFAULT_OS = TestUtil.createByteArray(1, "0");
+    private static final byte[] UPDATED_OS = TestUtil.createByteArray(1, "1");
+    private static final String DEFAULT_OS_CONTENT_TYPE = "image/jpg";
+    private static final String UPDATED_OS_CONTENT_TYPE = "image/png";
 
     private static final Instant DEFAULT_ADDED = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_ADDED = Instant.now().truncatedTo(ChronoUnit.MILLIS);
@@ -87,8 +87,8 @@ class PlatformResourceIT {
             .description(DEFAULT_DESCRIPTION)
             .accessLevel(DEFAULT_ACCESS_LEVEL)
             .version(DEFAULT_VERSION)
-            .contents(DEFAULT_CONTENTS)
-            .contentsContentType(DEFAULT_CONTENTS_CONTENT_TYPE)
+            .os(DEFAULT_OS)
+            .osContentType(DEFAULT_OS_CONTENT_TYPE)
             .added(DEFAULT_ADDED)
             .updated(DEFAULT_UPDATED)
             .active(DEFAULT_ACTIVE);
@@ -107,8 +107,8 @@ class PlatformResourceIT {
             .description(UPDATED_DESCRIPTION)
             .accessLevel(UPDATED_ACCESS_LEVEL)
             .version(UPDATED_VERSION)
-            .contents(UPDATED_CONTENTS)
-            .contentsContentType(UPDATED_CONTENTS_CONTENT_TYPE)
+            .os(UPDATED_OS)
+            .osContentType(UPDATED_OS_CONTENT_TYPE)
             .added(UPDATED_ADDED)
             .updated(UPDATED_UPDATED)
             .active(UPDATED_ACTIVE);
@@ -137,8 +137,8 @@ class PlatformResourceIT {
         assertThat(testPlatform.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testPlatform.getAccessLevel()).isEqualTo(DEFAULT_ACCESS_LEVEL);
         assertThat(testPlatform.getVersion()).isEqualTo(DEFAULT_VERSION);
-        assertThat(testPlatform.getContents()).isEqualTo(DEFAULT_CONTENTS);
-        assertThat(testPlatform.getContentsContentType()).isEqualTo(DEFAULT_CONTENTS_CONTENT_TYPE);
+        assertThat(testPlatform.getOs()).isEqualTo(DEFAULT_OS);
+        assertThat(testPlatform.getOsContentType()).isEqualTo(DEFAULT_OS_CONTENT_TYPE);
         assertThat(testPlatform.getAdded()).isEqualTo(DEFAULT_ADDED);
         assertThat(testPlatform.getUpdated()).isEqualTo(DEFAULT_UPDATED);
         assertThat(testPlatform.getActive()).isEqualTo(DEFAULT_ACTIVE);
@@ -212,8 +212,8 @@ class PlatformResourceIT {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
             .andExpect(jsonPath("$.[*].accessLevel").value(hasItem(DEFAULT_ACCESS_LEVEL.intValue())))
             .andExpect(jsonPath("$.[*].version").value(hasItem(DEFAULT_VERSION)))
-            .andExpect(jsonPath("$.[*].contentsContentType").value(hasItem(DEFAULT_CONTENTS_CONTENT_TYPE)))
-            .andExpect(jsonPath("$.[*].contents").value(hasItem(Base64Utils.encodeToString(DEFAULT_CONTENTS))))
+            .andExpect(jsonPath("$.[*].osContentType").value(hasItem(DEFAULT_OS_CONTENT_TYPE)))
+            .andExpect(jsonPath("$.[*].os").value(hasItem(Base64Utils.encodeToString(DEFAULT_OS))))
             .andExpect(jsonPath("$.[*].added").value(hasItem(DEFAULT_ADDED.toString())))
             .andExpect(jsonPath("$.[*].updated").value(hasItem(DEFAULT_UPDATED.toString())))
             .andExpect(jsonPath("$.[*].active").value(hasItem(DEFAULT_ACTIVE.booleanValue())));
@@ -235,8 +235,8 @@ class PlatformResourceIT {
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION))
             .andExpect(jsonPath("$.accessLevel").value(DEFAULT_ACCESS_LEVEL.intValue()))
             .andExpect(jsonPath("$.version").value(DEFAULT_VERSION))
-            .andExpect(jsonPath("$.contentsContentType").value(DEFAULT_CONTENTS_CONTENT_TYPE))
-            .andExpect(jsonPath("$.contents").value(Base64Utils.encodeToString(DEFAULT_CONTENTS)))
+            .andExpect(jsonPath("$.osContentType").value(DEFAULT_OS_CONTENT_TYPE))
+            .andExpect(jsonPath("$.os").value(Base64Utils.encodeToString(DEFAULT_OS)))
             .andExpect(jsonPath("$.added").value(DEFAULT_ADDED.toString()))
             .andExpect(jsonPath("$.updated").value(DEFAULT_UPDATED.toString()))
             .andExpect(jsonPath("$.active").value(DEFAULT_ACTIVE.booleanValue()));
@@ -266,8 +266,8 @@ class PlatformResourceIT {
             .description(UPDATED_DESCRIPTION)
             .accessLevel(UPDATED_ACCESS_LEVEL)
             .version(UPDATED_VERSION)
-            .contents(UPDATED_CONTENTS)
-            .contentsContentType(UPDATED_CONTENTS_CONTENT_TYPE)
+            .os(UPDATED_OS)
+            .osContentType(UPDATED_OS_CONTENT_TYPE)
             .added(UPDATED_ADDED)
             .updated(UPDATED_UPDATED)
             .active(UPDATED_ACTIVE);
@@ -288,8 +288,8 @@ class PlatformResourceIT {
         assertThat(testPlatform.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testPlatform.getAccessLevel()).isEqualTo(UPDATED_ACCESS_LEVEL);
         assertThat(testPlatform.getVersion()).isEqualTo(UPDATED_VERSION);
-        assertThat(testPlatform.getContents()).isEqualTo(UPDATED_CONTENTS);
-        assertThat(testPlatform.getContentsContentType()).isEqualTo(UPDATED_CONTENTS_CONTENT_TYPE);
+        assertThat(testPlatform.getOs()).isEqualTo(UPDATED_OS);
+        assertThat(testPlatform.getOsContentType()).isEqualTo(UPDATED_OS_CONTENT_TYPE);
         assertThat(testPlatform.getAdded()).isEqualTo(UPDATED_ADDED);
         assertThat(testPlatform.getUpdated()).isEqualTo(UPDATED_UPDATED);
         assertThat(testPlatform.getActive()).isEqualTo(UPDATED_ACTIVE);
@@ -367,8 +367,8 @@ class PlatformResourceIT {
             .name(UPDATED_NAME)
             .description(UPDATED_DESCRIPTION)
             .version(UPDATED_VERSION)
-            .contents(UPDATED_CONTENTS)
-            .contentsContentType(UPDATED_CONTENTS_CONTENT_TYPE)
+            .os(UPDATED_OS)
+            .osContentType(UPDATED_OS_CONTENT_TYPE)
             .added(UPDATED_ADDED)
             .updated(UPDATED_UPDATED);
 
@@ -388,8 +388,8 @@ class PlatformResourceIT {
         assertThat(testPlatform.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testPlatform.getAccessLevel()).isEqualTo(DEFAULT_ACCESS_LEVEL);
         assertThat(testPlatform.getVersion()).isEqualTo(UPDATED_VERSION);
-        assertThat(testPlatform.getContents()).isEqualTo(UPDATED_CONTENTS);
-        assertThat(testPlatform.getContentsContentType()).isEqualTo(UPDATED_CONTENTS_CONTENT_TYPE);
+        assertThat(testPlatform.getOs()).isEqualTo(UPDATED_OS);
+        assertThat(testPlatform.getOsContentType()).isEqualTo(UPDATED_OS_CONTENT_TYPE);
         assertThat(testPlatform.getAdded()).isEqualTo(UPDATED_ADDED);
         assertThat(testPlatform.getUpdated()).isEqualTo(UPDATED_UPDATED);
         assertThat(testPlatform.getActive()).isEqualTo(DEFAULT_ACTIVE);
@@ -412,8 +412,8 @@ class PlatformResourceIT {
             .description(UPDATED_DESCRIPTION)
             .accessLevel(UPDATED_ACCESS_LEVEL)
             .version(UPDATED_VERSION)
-            .contents(UPDATED_CONTENTS)
-            .contentsContentType(UPDATED_CONTENTS_CONTENT_TYPE)
+            .os(UPDATED_OS)
+            .osContentType(UPDATED_OS_CONTENT_TYPE)
             .added(UPDATED_ADDED)
             .updated(UPDATED_UPDATED)
             .active(UPDATED_ACTIVE);
@@ -434,8 +434,8 @@ class PlatformResourceIT {
         assertThat(testPlatform.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testPlatform.getAccessLevel()).isEqualTo(UPDATED_ACCESS_LEVEL);
         assertThat(testPlatform.getVersion()).isEqualTo(UPDATED_VERSION);
-        assertThat(testPlatform.getContents()).isEqualTo(UPDATED_CONTENTS);
-        assertThat(testPlatform.getContentsContentType()).isEqualTo(UPDATED_CONTENTS_CONTENT_TYPE);
+        assertThat(testPlatform.getOs()).isEqualTo(UPDATED_OS);
+        assertThat(testPlatform.getOsContentType()).isEqualTo(UPDATED_OS_CONTENT_TYPE);
         assertThat(testPlatform.getAdded()).isEqualTo(UPDATED_ADDED);
         assertThat(testPlatform.getUpdated()).isEqualTo(UPDATED_UPDATED);
         assertThat(testPlatform.getActive()).isEqualTo(UPDATED_ACTIVE);

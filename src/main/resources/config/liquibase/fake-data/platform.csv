@@ -1,4 +1,4 @@
-id;name;description;access_level;version;contents;contents_content_type;added;updated;active
+id;name;description;access_level;version;os;os_content_type;added;updated;active
 1;cyan once;withdrawal;2;utilisation VGA;../fake-data/blob/hipster.png;image/png;2023-06-26T06:43:48;2023-06-26T09:15:07;true
 2;Hoppe Borders Touring;male foreground;1;matrix cumbersome Northwest;../fake-data/blob/hipster.png;image/png;2023-06-26T07:00:30;2023-06-25T23:51:14;false
 3;tolerance scientist Computers;Outdoors generating;3;Chrysler gold Southeast;../fake-data/blob/hipster.png;image/png;2023-06-26T13:56:48;2023-06-26T05:42:34;false

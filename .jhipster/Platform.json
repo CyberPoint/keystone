@@ -24,7 +24,7 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "contents",
+      "fieldName": "os",
       "fieldType": "byte[]",
       "fieldTypeBlobContent": "any"
     },

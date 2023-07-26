@@ -14,7 +14,7 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="embeddeddata" type="${blobType}" remarks="The firstname attribute.">
+            <column name="embeddeddata" type="${blobType}" remarks="The firstname attribute.\nString not blob, var(Contents) -&gt; string.">
                 <constraints nullable="true" />
             </column>
             <column name="embeddeddata_content_type" type="varchar(255)">
@@ -33,6 +33,9 @@
                 <constraints nullable="true" />
             </column>
             <column name="url" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="content" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="task_id" type="bigint">
@@ -67,6 +70,7 @@
             <column name="ip_address" type="string"/>
             <column name="headers" type="string"/>
             <column name="url" type="string"/>
+            <column name="content" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

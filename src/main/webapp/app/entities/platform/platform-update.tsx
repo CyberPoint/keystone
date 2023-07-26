@@ -133,10 +133,10 @@ export const PlatformUpdate = () => {
                 type="text"
               />
               <ValidatedBlobField
-                label={translate('keyStoneApp.platform.contents')}
-                id="platform-contents"
-                name="contents"
-                data-cy="contents"
+                label={translate('keyStoneApp.platform.os')}
+                id="platform-os"
+                name="os"
+                data-cy="os"
                 openActionLabel={translate('entity.action.open')}
               />
               <ValidatedField

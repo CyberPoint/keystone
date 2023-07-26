@@ -155,6 +155,10 @@ export const TaskResult = () => {
                     <Translate contentKey="keyStoneApp.taskResult.url">Url</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('url')} />
                   </th>
+                  <th className="hand" onClick={sort('content')}>
+                    <Translate contentKey="keyStoneApp.taskResult.content">Content</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('content')} />
+                  </th>
                   <th>
                     <Translate contentKey="keyStoneApp.taskResult.task">Task</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -189,6 +193,7 @@ export const TaskResult = () => {
                     <td>{taskResult.ipAddress}</td>
                     <td>{taskResult.headers}</td>
                     <td>{taskResult.url}</td>
+                    <td>{taskResult.content}</td>
                     <td>{taskResult.task ? <Link to={`/task/${taskResult.task.id}`}>{taskResult.task.id}</Link> : ''}</td>
                     <td className="text-end">
                       <div className="btn-group flex-btn-group-container">

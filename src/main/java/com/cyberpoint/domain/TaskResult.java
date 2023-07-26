@@ -27,9 +27,9 @@ public class TaskResult implements Serializable {
     private Long id;
 
     /**
-     * The firstname attribute.
+     * The firstname attribute.\nString not blob, var(Contents) -> string.
      */
-    @Schema(description = "The firstname attribute.")
+    @Schema(description = "The firstname attribute.\nString not blob, var(Contents) -> string.")
     @Lob
     @Column(name = "embeddeddata")
     private byte[] embeddeddata;
@@ -52,6 +52,9 @@ public class TaskResult implements Serializable {
 
     @Column(name = "url")
     private String url;
+
+    @Column(name = "content")
+    private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "results", "agent" }, allowSetters = true)
@@ -163,6 +166,19 @@ public class TaskResult implements Serializable {
         this.url = url;
     }
 
+    public String getContent() {
+        return this.content;
+    }
+
+    public TaskResult content(String content) {
+        this.setContent(content);
+        return this;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public Task getTask() {
         return this.task;
     }
@@ -207,6 +223,7 @@ public class TaskResult implements Serializable {
             ", ipAddress='" + getIpAddress() + "'" +
             ", headers='" + getHeaders() + "'" +
             ", url='" + getUrl() + "'" +
+            ", content='" + getContent() + "'" +
             "}";
     }
 }

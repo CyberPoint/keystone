@@ -7,7 +7,7 @@
       "fieldName": "embeddeddata",
       "fieldType": "byte[]",
       "fieldTypeBlobContent": "any",
-      "javadoc": "The firstname attribute."
+      "javadoc": "The firstname attribute.\\nString not blob, var(Contents) -> string."
     },
     {
       "fieldName": "added",
@@ -28,6 +28,10 @@
     },
     {
       "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
       "fieldType": "String"
     }
   ],

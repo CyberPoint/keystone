@@ -130,9 +130,8 @@ export const Platform = () => {
                   <Translate contentKey="keyStoneApp.platform.version">Version</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('version')} />
                 </th>
-                <th className="hand" onClick={sort('contents')}>
-                  <Translate contentKey="keyStoneApp.platform.contents">Contents</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('contents')} />
+                <th className="hand" onClick={sort('os')}>
+                  <Translate contentKey="keyStoneApp.platform.os">Os</Translate> <FontAwesomeIcon icon={getSortIconByFieldName('os')} />
                 </th>
                 <th className="hand" onClick={sort('added')}>
                   <Translate contentKey="keyStoneApp.platform.added">Added</Translate>{' '}
@@ -162,16 +161,16 @@ export const Platform = () => {
                   <td>{platform.accessLevel}</td>
                   <td>{platform.version}</td>
                   <td>
-                    {platform.contents ? (
+                    {platform.os ? (
                       <div>
-                        {platform.contentsContentType ? (
-                          <a onClick={openFile(platform.contentsContentType, platform.contents)}>
+                        {platform.osContentType ? (
+                          <a onClick={openFile(platform.osContentType, platform.os)}>
                             <Translate contentKey="entity.action.open">Open</Translate>
                             &nbsp;
                           </a>
                         ) : null}
                         <span>
-                          {platform.contentsContentType}, {byteSize(platform.contents)}
+                          {platform.osContentType}, {byteSize(platform.os)}
                         </span>
                       </div>
                     ) : null}

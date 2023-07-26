@@ -24,9 +24,10 @@
       "ipAddress": "Ip Address",
       "headers": "Headers",
       "url": "Url",
+      "content": "Content",
       "task": "Task",
       "help": {
-        "embeddeddata": "The firstname attribute."
+        "embeddeddata": "The firstname attribute.\nString not blob, var(Contents) -&gt; string."
       }
     }
   }

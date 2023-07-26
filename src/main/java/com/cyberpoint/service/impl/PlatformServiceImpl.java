@@ -57,11 +57,11 @@ public class PlatformServiceImpl implements PlatformService {
                 if (platform.getVersion() != null) {
                     existingPlatform.setVersion(platform.getVersion());
                 }
-                if (platform.getContents() != null) {
-                    existingPlatform.setContents(platform.getContents());
+                if (platform.getOs() != null) {
+                    existingPlatform.setOs(platform.getOs());
                 }
-                if (platform.getContentsContentType() != null) {
-                    existingPlatform.setContentsContentType(platform.getContentsContentType());
+                if (platform.getOsContentType() != null) {
+                    existingPlatform.setOsContentType(platform.getOsContentType());
                 }
                 if (platform.getAdded() != null) {
                     existingPlatform.setAdded(platform.getAdded());

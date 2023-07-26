@@ -6,8 +6,8 @@ export interface IPlatform {
   description?: string | null;
   accessLevel?: number;
   version?: string | null;
-  contentsContentType?: string | null;
-  contents?: string | null;
+  osContentType?: string | null;
+  os?: string | null;
   added?: string | null;
   updated?: string | null;
   active?: boolean | null;

@@ -85,6 +85,12 @@ export const TaskResultDetail = () => {
           </dt>
           <dd>{taskResultEntity.url}</dd>
           <dt>
+            <span id="content">
+              <Translate contentKey="keyStoneApp.taskResult.content">Content</Translate>
+            </span>
+          </dt>
+          <dd>{taskResultEntity.content}</dd>
+          <dt>
             <Translate contentKey="keyStoneApp.taskResult.task">Task</Translate>
           </dt>
           <dd>{taskResultEntity.task ? taskResultEntity.task.id : ''}</dd>

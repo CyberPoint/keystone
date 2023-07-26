@@ -10,6 +10,7 @@ export interface ITaskResult {
   ipAddress?: string;
   headers?: string | null;
   url?: string | null;
+  content?: string | null;
   task?: ITask | null;
 }
 
